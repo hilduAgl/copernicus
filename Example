@@ -49,7 +49,7 @@ class OverfishingRisk:
     def calculate_risk(self):
         return (self.w1 * self.fishing_pressure +
                 self.w2 * (1 - self.stock_health) +  # Inverse of stock health
-                self.w3 * self.historical_depletion)
+                self.w3 * (1 - self.historical_depletion))
 
     def categorize_risk(self, risk_score):
         if risk_score < 0.4:
