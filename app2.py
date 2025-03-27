@@ -7,11 +7,13 @@ import streamlit as st
 
 st.set_page_config(page_title="Personal Finance Dashboard", layout="wide")
 
-# Sample transaction data (for net worth calculation)
 data = {
     "Date": pd.date_range(start="2024-03-01", periods=15, freq="D"),
-    "Category": ["Food", "Mortgage", "Utilities", "Transport", "Entertainment", "Shopping", "Healthcare", "Savings", "Insurance", "Misc", "Investment"],
-    "Amount": [-50, -800, -100, -30, -60, -120, -70, -500, -90, -40, -1000, 3000, 500, 200, 800],  # Negative = expenses
+    "Category": ["Food", "Mortgage", "Utilities", "Transport", "Entertainment", 
+                 "Shopping", "Healthcare", "Savings", "Insurance", "Misc", 
+                 "Investment", "Food", "Transport", "Shopping", "Savings"],  # 15 values
+    "Amount": [-50, -800, -100, -30, -60, -120, -70, -500, -90, -40, 
+               -1000, 3000, 500, 200, 800],  # 15 values
 }
 
 df = pd.DataFrame(data)
